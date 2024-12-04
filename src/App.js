@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Space } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Dashboard from "./context/Dashboard";
+// import StatsCards from "./components/StatsCards";
+// import ChartSection from "./components/ChartSection";
+// import ImportantNumbers from "./components/ImportantNumbers"; // Assuming this is another new component
+// import ComplaintList from "./components/ComplaintList"; // Assuming this is another new component
+
+// import UpcomingActivity from "./components/UpcomingActivity";
+// import PendingMaintenances from "./components/PendingMaintenances";
+
+const App = () => (
+ <>
+ <Topbar/>
+ <Space>
+  <Sidebar/>
+  <Dashboard/>
+ </Space>
+ </>
+);
 
 export default App;

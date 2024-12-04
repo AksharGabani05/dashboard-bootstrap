@@ -11,3 +11,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.custom-scroll {
+  max-height: 210px;
+  overflow-y: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 1px; /* Set scroll bar width */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scroll track background */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Scroll bar color */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scroll bar hover color */
+}
+/* Container for the chart with shadow */
+.chart-card {
+  background: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.chart-card:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Title styling */
+.chart-title {
+  font-size: 1.25rem; /* Medium-sized text */
+  font-weight: 600; /* Bold font */
+  margin-bottom: 15px; /* Spacing below the title */
+  text-align: center; /* Center-align the title */
+  color: #333333; /* Dark text color */
+}
+
+/* Chart container */
+.chart-container {
+  width: 100%;
+  max-height: 400px; /* Set maximum height for the chart */
+}
+/* Custom Scrollbar Styling */
+.list-group {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1); /* Scrollbar thumb and track color */
+}
+
+.list-group::-webkit-scrollbar {
+  width: px; /* 1px scrollbar width */
+}
+
+.list-group::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Scrollbar thumb color */
+}
+
+.list-group::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* Scrollbar track color */
+}
+/* On smaller screens, collapse the sidebar */
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    position: relative;
+    /* width: 100%; */
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* In your CSS file (e.g., App.css) */
